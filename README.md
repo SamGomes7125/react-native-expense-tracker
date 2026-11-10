@@ -1,50 +1,33 @@
-# Welcome to your Expo app 👋
+# Expense Tracker (React Native + Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile expense tracker for logging, editing and analysing spending, built with Expo Router and TypeScript.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Add, edit and delete expenses
+- Expense list and home summary
+- Analytics tab with spending charts (`react-native-chart-kit`)
+- Data persisted on-device with AsyncStorage
+- Light and dark themes
 
-   ```bash
-   npm install
-   ```
+## Stack
 
-2. Start the app
+React Native · Expo · Expo Router · TypeScript · AsyncStorage · react-native-chart-kit
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Run locally
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Then open in Expo Go, an Android emulator or the iOS simulator.
 
-## Learn more
+## Structure
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+app/(tabs)/        Home, expenses, add-expense and analytics screens
+app/edit-expense.tsx
+app/types/         Expense type
+app/utils/storage.ts  AsyncStorage persistence
+```
